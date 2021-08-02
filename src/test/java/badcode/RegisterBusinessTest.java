@@ -20,8 +20,7 @@ class RegisterBusinessTest {
     public void case02() {
         RegisterBusiness registerBusiness = new RegisterBusiness();
         Exception exception = assertThrows(ArgumentNullException.class, () ->
-                registerBusiness.register(null, speaker)
-        );
+                registerBusiness.register(null, speaker));
         assertEquals("Last name is required.", exception.getMessage());
     }
 }
